@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OLWX Bazaar</title>
+  <meta name="description" content="OLWX Bazaar - Free Urdu Classifieds for buying and selling mobiles, bikes, and property. Post your ad now.">
+  <meta name="keywords" content="OLWX, OLWX Bazaar, Urdu ads, buy sell, local ads, mobile, car, bike, property, OLX alternative">
+  <meta name="author" content="OLWX Bazaar">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <div class="logo">OLWX Bazaar</div>
+    <nav>
+      <a href="#" onclick="showPage('home')">Home</a>
+      <a href="#" onclick="showPage('add')">+Post</a>
+      <a href="#" onclick="showPage('about')">About</a>
+      <a href="#" onclick="showPage('contact')">Contact</a>
+      <a href="#" onclick="showPage('login')">Login</a>
+    </nav>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search...">
+      <button onclick="searchPost()">🔍</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="page active-page">
+      <h2>Welcome to OLWX Bazaar</h2>
+      <div id="postList" class="post-list"></div>
+    </section>
+
+    <section id="blog" class="page">
+      <h2>Post Details</h2>
+      <div id="postDetails" class="full-post"></div>
+      <button onclick="showPage('home')">← Back to Home</button>
+    </section>
+
+    <section id="add" class="page">
+      <h2>Post Your Ad</h2>
+      <form id="postForm">
+        <input type="text" id="title" placeholder="Title" required><br><br>
+        <input type="number" id="price" placeholder="Price" required><br><br>
+        <input type="text" id="location" placeholder="Location" required><br><br>
+        <textarea id="description" placeholder="Description" required></textarea><br><br>
+        <input type="file" id="image" accept="image/*" required><br><br>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section id="about" class="page"><h2>About</h2><p>We are a local marketplace to buy and sell items.</p></section>
+    <section id="contact" class="page"><h2>Contact</h2><p>Email: support@olwx.com</p></section>
+    <section id="login" class="page"><h2>Login</h2><p>Please login to post your ads.</p></section>
+  </main>
+
+  <footer class="footer-buttons">
+    <button onclick="alert('Calling seller...')">Call</button>
+    <button onclick="showPage('add')">+Add</button>
+    <button onclick="alert('Opening chat...')">Chat</button>
+  </footer>
+
+  <script src="script.js?v=2"></script>
+</body>
+</html>
